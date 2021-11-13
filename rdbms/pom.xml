@@ -40,6 +40,12 @@
             <version>4.5.0</version>
         </dependency>
         <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-maven-plugin</artifactId>
+            <version>4.5.0</version>
+            <type>maven-plugin</type>
+        </dependency>
+        <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-test</artifactId>
             <version>${kotlin.version}</version>
@@ -104,6 +110,7 @@
                 <artifactId>liquibase-maven-plugin</artifactId>
                 <version>4.5.0</version>
                 <configuration>
+                    <changeLogDirectory>src/main/resources</changeLogDirectory>
                     <changeLogFile>db.changelog-master.yaml</changeLogFile>
                     <url>jdbc:postgresql://localhost:5432/db</url>
                     <username>postgres</username>

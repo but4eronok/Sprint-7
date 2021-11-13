@@ -2,4 +2,13 @@ databaseChangeLog:
   - include:
       file: init.sql
 
+  - include:
+      file: insert_values.sql
+
+  - include:
+      file: index_create.sql
+
+  - include:
+      file: check.sql
+
 
